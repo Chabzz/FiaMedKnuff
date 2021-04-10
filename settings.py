@@ -35,18 +35,17 @@ class Path:
         self.green_path = []
         self.red_path = []
 
-        self.gx = None
-        self.gy = None 
         self.ry = None
-        self.by = None
+        self.by = None 
+        self.gx = None
+        self.ry = None
         self.count = None
 
-    def update_coordinates(self, gx, gy, ry, by, count):
-
-        self.gx = gx
-        self.gy = gy
+    def update_coordinates(self, ry, by, gx, gy, count):
         self.ry = ry
         self.by = by
+        self.gx = gx
+        self.gy = gy
         self.count = count
 
     def start_populating(self):
