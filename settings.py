@@ -1,12 +1,12 @@
 class Color:
 
-    GREEN = '#0CED2C'
-    RED = '#F71313'
-    YELLOW = '#FFFF00'
-    BLUE = '#3575EC'
-    DEFAULT = '#E9E9E9'
-    CYAN = '#4EB1BA'
-    GRAY = '#A9A9A9'
+    GREEN = '#00d464'
+    RED = '#ff0000'
+    YELLOW = '#f0ff00'
+    BLUE = '#2c84ff'
+    DEFAULT = '#fff'
+    CYAN = '#5db5bd'
+    GRAY = '#b6b6b6'
 
 
 class Board:
@@ -23,8 +23,8 @@ class Board:
 
 class Text:
 
-    MADE_BY = 'Made By: Mansi Agrawal & Shivam Gupta'
-    HEADER =  'LUDO - THE GAME'
+    MADE_BY = 'Made By: Axel Renmark'
+    HEADER =  'Fia med knuff'
 
 
 class Path:

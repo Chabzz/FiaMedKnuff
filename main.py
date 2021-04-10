@@ -37,7 +37,7 @@ class Coin:
             return
 
         if roll[-1] == 6:
-            tkinter.messagebox.showerror('Error', 'You got 6, Please Roll Again')
+            tkinter.messagebox.showerror('Fel', 'Du fick en 6a, kasta igen')
             return
 
         if len(roll) != 0 :
@@ -78,15 +78,15 @@ class Coin:
             Dice.remove()
             if self.curr_index == len(self.path_list) - 1:
                 self.win = 1
-                tkinter.messagebox.showinfo('INFO','!! Congratulations !!\nPlease Roll Dice Again')
+                tkinter.messagebox.showinfo('INFO','!! Grattis !!\nKasta tärningen igen')
                 congrats = self.congratulations()
 
             if check[0]:
-                tkinter.messagebox.showinfo('INFO','You killed another coin! Now you get another chance.\nPlease Roll Dice Again')
+                tkinter.messagebox.showinfo('INFO','Du knuffade en pjäs! Nu får du en till chans.\nKasta igen')
                 congrats = self.congratulations()
 
         if self.is_player_won():
-            tkinter.messagebox.showinfo('INFO','{} Wins'.format(self.color.title()))
+            tkinter.messagebox.showinfo('INFO','{} Vinner'.format(self.color.title()))
             position.append(self.player.title())
             Dice.roll = []
             Dice.set(self.flag)
@@ -142,7 +142,7 @@ class Coin:
                 color_reached += 1
 
         if color_reached is 3:
-            tkinter.messagebox.showinfo('Game Over', '\n\n1. {}\n\n2. {}\n\n3. {}'.format(*position))
+            tkinter.messagebox.showinfo('Spel Över', '\n\n1. {}\n\n2. {}\n\n3. {}'.format(*position))
         else:
             return False
         return True
@@ -264,7 +264,7 @@ class Dice:
                             borderwidth=3, relief=tk.SUNKEN)
             next_label.place(x=100, y=100)
 
-            roll_label = tk.Label(ludo.get_frame(), text='ROLL PLEASE', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
+            roll_label = tk.Label(ludo.get_frame(), text='KASTA TÄRNINGEN', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
             roll_label.place(x=100, y=200)
 
             img = ImageTk.PhotoImage(Image.open('./assets/trans.png'))
@@ -323,13 +323,13 @@ def startgame():
         for j in range(4):
             colors[i][j].set_playername(turn[i])
 
-    start_label = tk.Label(ludo.get_frame(), text='! START ! Let\'s Begin with {}'.format(turn[0]), font=(None, 20),
+    start_label = tk.Label(ludo.get_frame(), text='! STARTA ! Låt oss börja med {}'.format(turn[0]), font=(None, 20),
                          width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
     start_label.place(x=100, y=100)
     top.destroy()
 
 def create_enterpage():
-    enter_label = tk.Label(top, text='Enter Your Nickname!', font=(None, 20), width=30, height=3,
+    enter_label = tk.Label(top, text='Skriv ditt AnvändarNamn!', font=(None, 20), width=30, height=3,
                             borderwidth=3, relief=tk.RAISED)
     enter_label.place(x=20, y=20)
 
@@ -365,12 +365,12 @@ def create_enterpage():
     yellow_label.place(x=407, y=130)
 
 def on_closing():
-    if tkinter.messagebox.askokcancel("Quit", "Do you want to quit the game? If you want to continue the game, press Enter in the Nickname window"):
+    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck Enter i AnvändarNamn fönstret"):
         top.destroy()
         root.destroy()
 
 def on_closingroot():
-    if tkinter.messagebox.askokcancel("Quit", "Do you want to quit the game?"):
+    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta?"):
         root.destroy() 
 
 
@@ -379,12 +379,12 @@ root = tk.Tk()
 width = root.winfo_screenwidth()
 height = root.winfo_screenheight()
 root.geometry('{}x{}'.format(width, height))
-root.title('Ludo')
+root.title('Fia med Knuff')
 
 ludo = LudoBoard(root)
 ludo.create()
 
-turn = ['Green', 'Red', 'Blue', 'Yellow']
+turn = ['Grön', 'Röd', 'Blå', 'Gul']
 position = []
 colors = []
 colors.append(align(2.1*Board.SQUARE_SIZE, 2.1*Board.SQUARE_SIZE, color='green', path_list=path.green_path, flag=0))
@@ -400,23 +400,23 @@ button = tk.Button(ludo.get_frame(), text='ROLL', command=Dice.start, width=20, 
 button.place(x=210, y=470)
 
 
-welcome_msg = ''' Welcome Champs let's get into the game of LUDO :-) \n
-        Rules of the game:
-- The players roll a six-sided die in turns and can advance any of their coins on the track by the number of steps as displayed by the dice.\n
-- Once you get a six in a dice throw, you have to roll the dice again, and must use all scores while making the final selection of what coins to move where.\n
-- If you get a six three times in a row, your throws are reset and you will lose that chance.\n
+welcome_msg = ''' Välkommen till Fia med knuff \n
+        Reglerna:
+- Spelarna kastar en sexsidig tärning i tur och ordning och kan flytta sina pjäser på banan lika många steg som tärningen visar.\n
+- Om du kastar och får en sexa, så måste du kasta tärningen en gång till, och du måste använda alla steg när du bestämmer vilken pjäs du skall flytta vart.\n
+- Ifall du får en sexa tre gånger irad, kommer dina kast återställas och du förlorar den chansen.\n
 - The coin can advance in the home run only if it reaches exactly inside the home pocket, or moves closer to it through the home run. 
 For example, if the coin is four squares away from the home pocket and the player rolls a five, he must apply the throw to some other coin. \
 However, if you roll a two, you can advance the coin by two squares and then it rests there until the next move.\n 
     
-    Enjoy the game and have fun.
-        # Best of luck #
+    Hoppas du får en rolig stund.
+        # Lycka till! #
 '''
-tkinter.messagebox.showinfo('Welcome', welcome_msg)
+tkinter.messagebox.showinfo('Välkommen', welcome_msg)
 
 top = tk.Toplevel(root)
 top.geometry('600x600')
-top.title('Nickname')
+top.title('AnvändarNamn')
 top.protocol("WM_DELETE_WINDOW", on_closing)
 root.protocol("WM_DELETE_WINDOW", on_closingroot)
 create_enterpage()
