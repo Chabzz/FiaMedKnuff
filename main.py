@@ -142,7 +142,7 @@ class Coin:
                 color_reached += 1
 
         if color_reached is 3:
-            tkinter.messagebox.showinfo('Spel Över', '\n\n1. {}\n\n2. {}\n\n3. {}'.format(*position))
+            tkinter.messagebox.showinfo('Spelet är över', '\n\n1. {}\n\n2. {}\n\n3. {}'.format(*position))
         else:
             return False
         return True
@@ -329,7 +329,7 @@ def startgame():
     top.destroy()
 
 def create_enterpage():
-    enter_label = tk.Label(top, text='Skriv ditt AnvändarNamn!', font=(None, 20), width=30, height=3,
+    enter_label = tk.Label(top, text='Skriv ditt Användarnamn!', font=(None, 20), width=30, height=3,
                             borderwidth=3, relief=tk.RAISED)
     enter_label.place(x=20, y=20)
 
@@ -365,7 +365,7 @@ def create_enterpage():
     yellow_label.place(x=407, y=130)
 
 def on_closing():
-    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck Enter i AnvändarNamn fönstret"):
+    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck Enter i Användarnamn fönstret"):
         top.destroy()
         root.destroy()
 
@@ -396,7 +396,7 @@ for i in range(4):
     for j in range(4):
         colors[i][j].change_state(0)
 
-button = tk.Button(ludo.get_frame(), text='ROLL', command=Dice.start, width=20, height=2)
+button = tk.Button(ludo.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
 button.place(x=210, y=470)
 
 
@@ -405,18 +405,18 @@ welcome_msg = ''' Välkommen till Fia med knuff \n
 - Spelarna kastar en sexsidig tärning i tur och ordning och kan flytta sina pjäser på banan lika många steg som tärningen visar.\n
 - Om du kastar och får en sexa, så måste du kasta tärningen en gång till, och du måste använda alla steg när du bestämmer vilken pjäs du skall flytta vart.\n
 - Ifall du får en sexa tre gånger irad, kommer dina kast återställas och du förlorar den chansen.\n
-- The coin can advance in the home run only if it reaches exactly inside the home pocket, or moves closer to it through the home run. 
-For example, if the coin is four squares away from the home pocket and the player rolls a five, he must apply the throw to some other coin. \
-However, if you roll a two, you can advance the coin by two squares and then it rests there until the next move.\n 
+- Pjäsen kan endast nå mittencirkeln om man får exakt rätt mängd steg. Om det är mindre än vad som krävs så flyttas pjäsen fram x antal steg. 
+T.ex. om pjäsen är fyra steg iväg och du får en femma så måste du använda de kastet på en annan pjäs. 
+Men om du får en tvåa så kommer pjäsen flyttas två steg närmare mittencirkeln.\n 
     
-    Hoppas du får en rolig stund.
+    Hoppas du har det roligt.
         # Lycka till! #
 '''
 tkinter.messagebox.showinfo('Välkommen', welcome_msg)
 
 top = tk.Toplevel(root)
 top.geometry('600x600')
-top.title('AnvändarNamn')
+top.title('Användarnamn')
 top.protocol("WM_DELETE_WINDOW", on_closing)
 root.protocol("WM_DELETE_WINDOW", on_closingroot)
 create_enterpage()
