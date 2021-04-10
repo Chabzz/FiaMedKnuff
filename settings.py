@@ -30,11 +30,11 @@ class Text:
 class Path:
 
     def __init__(self):
-
-        self.green_path = []
-        self.red_path = []
         self.blue_path = []
         self.yellow_path = []
+        self.green_path = []
+        self.red_path = []
+
         self.gx = None
         self.gy = None 
         self.ry = None
@@ -95,10 +95,10 @@ class Path:
                 p = 1
             else:
                 p = 0
-            self.green_path.append((self.gx  +  k*i*Board.SQUARE_SIZE, self.gy, p))
-            self.red_path.append((self.gy, self.ry  -  k*i*Board.SQUARE_SIZE, p))
-            self.blue_path.append((self.ry - k*i*Board.SQUARE_SIZE, self.by, p))
-            self.yellow_path.append((self.by, self.gx + k*i*Board.SQUARE_SIZE, p))
+            self.blue_path.append((self.ry  +  k*i*Board.SQUARE_SIZE, self.by, p))
+            self.yellow_path.append((self.by, self.gx  -  k*i*Board.SQUARE_SIZE, p))
+            self.green_path.append((self.gx - k*i*Board.SQUARE_SIZE, self.gy, p))
+            self.red_path.append((self.gy, self.ry + k*i*Board.SQUARE_SIZE, p))
 
     def direct_vertical(self, k, pow_index = -1):
 
@@ -107,10 +107,10 @@ class Path:
                 p = 1
             else:
                 p = 0
-            self.green_path.append((self.gx, self.gy - k*i*Board.SQUARE_SIZE, p))
-            self.red_path.append((self.gy - k*i*Board.SQUARE_SIZE,self.ry, p))
-            self.blue_path.append((self.ry, self.by + k*i*Board.SQUARE_SIZE, p))
-            self.yellow_path.append((self.by + k*i*Board.SQUARE_SIZE, self.gx, p))
+            self.blue_path.append((self.ry, self.by - k*i*Board.SQUARE_SIZE, p))
+            self.yellow_path.append((self.by - k*i*Board.SQUARE_SIZE,self.gx, p))
+            self.green_path.append((self.gx, self.gy + k*i*Board.SQUARE_SIZE, p))
+            self.red_path.append((self.gy + k*i*Board.SQUARE_SIZE, self.ry, p))
 
 
     def direct(self, direction, pow_index = -1):

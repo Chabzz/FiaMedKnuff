@@ -346,7 +346,15 @@ def create_enterpage():
         temp.place(x=387, y=400 - i*180)
         players.append(temp)
 
-    global greenimg, redimg, blueimg, yellowimg
+    global blueimg, yellowimg, greenimg, redimg
+    
+    blueimg = ImageTk.PhotoImage(Image.open('./assets/blue2.png'))
+    blue_label = tk.Label(top, image=blueimg)
+    blue_label.place(x=407, y=310)
+
+    yellowimg = ImageTk.PhotoImage(Image.open('./assets/yellow2.png'))
+    yellow_label = tk.Label(top, image=yellowimg)
+    yellow_label.place(x=407, y=130)
 
     greenimg = ImageTk.PhotoImage(Image.open('./assets/green2.png'))
     green_label = tk.Label(top, image=greenimg)
@@ -356,13 +364,6 @@ def create_enterpage():
     red_label = tk.Label(top, image=redimg)
     red_label.place(x=107, y=310)
 
-    blueimg = ImageTk.PhotoImage(Image.open('./assets/blue2.png'))
-    blue_label = tk.Label(top, image=blueimg)
-    blue_label.place(x=407, y=310)
-
-    yellowimg = ImageTk.PhotoImage(Image.open('./assets/yellow2.png'))
-    yellow_label = tk.Label(top, image=yellowimg)
-    yellow_label.place(x=407, y=130)
 
 def on_closing():
     if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck Enter i AnvändarNamn fönstret"):
@@ -384,13 +385,13 @@ root.title('Fia med Knuff')
 ludo = LudoBoard(root)
 ludo.create()
 
-turn = ['Grön', 'Röd', 'Blå', 'Gul']
+turn = ['Blå', 'Gul', 'Grön', 'Röd']
 position = []
 colors = []
-colors.append(align(2.1*Board.SQUARE_SIZE, 2.1*Board.SQUARE_SIZE, color='green', path_list=path.green_path, flag=0))
-colors.append(align(2.1*Board.SQUARE_SIZE, 11.1*Board.SQUARE_SIZE, color='red', path_list=path.red_path, flag=1))
-colors.append(align(11.1*Board.SQUARE_SIZE, 11.1*Board.SQUARE_SIZE, color='blue', path_list=path.blue_path, flag=2))
-colors.append(align(11.1*Board.SQUARE_SIZE, 2.1*Board.SQUARE_SIZE, color='yellow', path_list=path.yellow_path, flag=3))
+colors.append(align(2.1*Board.SQUARE_SIZE, 2.1*Board.SQUARE_SIZE, color='blue', path_list=path.blue_path, flag=0))
+colors.append(align(2.1*Board.SQUARE_SIZE, 11.1*Board.SQUARE_SIZE, color='yellow', path_list=path.yellow_path, flag=1))
+colors.append(align(11.1*Board.SQUARE_SIZE, 11.1*Board.SQUARE_SIZE, color='green', path_list=path.green_path, flag=2))
+colors.append(align(11.1*Board.SQUARE_SIZE, 2.1*Board.SQUARE_SIZE, color='red', path_list=path.red_path, flag=3))
 
 for i in range(4):
     for j in range(4):
