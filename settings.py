@@ -1,12 +1,12 @@
 class Color:
 
-    GREEN = '#00d464'
-    RED = '#ff0000'
-    YELLOW = '#f0ff00'
-    BLUE = '#2c84ff'
+    GRÖN = '#00d464'
+    RÖD = '#ff0000'
+    GUL = '#f0ff00'
+    BLÅ = '#2c84ff'
     DEFAULT = '#fff'
     CYAN = '#5db5bd'
-    GRAY = '#b6b6b6'
+    GRÅ = '#b6b6b6'
 
 
 class Board:

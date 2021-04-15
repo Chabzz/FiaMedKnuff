@@ -57,68 +57,68 @@ class LudoBoard:
                     self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, '', 1)
                 else:
                     if j < 6:
-                        self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.RED, 1)
-                        self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.BLUE, 1)
+                        self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.RÖD, 1)
+                        self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.BLÅ, 1)
                     elif j > 8:
-                        self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.YELLOW, 1)
-                        self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.GREEN, 1)
+                        self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.GUL, 1)
+                        self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.GRÖN, 1)
 
         for i, j in Board.POSITIVE_V:
             if i > j:
-                self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.RED, 1)
+                self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.RÖD, 1)
             else:
-                self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.YELLOW, 1)
+                self.draw_rectangle(i + 0.5, j + 0.5, i + 1.5, j + 1.5, Color.GUL, 1)
             
-            self.draw_circle(i + 0.7, j + 0.7, i + 1.3, j + 1.3, Color.GRAY)
+            self.draw_circle(i + 0.7, j + 0.7, i + 1.3, j + 1.3, Color.GRÅ)
         for j, i in Board.POSITIVE_H:
             if i > j:
-                self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.BLUE, 1)
+                self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.BLÅ, 1)
             else:
-                self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.GREEN, 1)
-            self.draw_circle(j + 0.7, i + 0.7, j + 1.3, i + 1.3, Color.GRAY)
+                self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.GRÖN, 1)
+            self.draw_circle(j + 0.7, i + 0.7, j + 1.3, i + 1.3, Color.GRÅ)
 
     def home(self):
 
         for i, j in Board.POINTS:
 
             if i == 0 and j == 0:
-                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.BLUE, 3)
+                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.BLÅ, 3)
             elif i == 0 and j == 1:
-                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.YELLOW, 3)
+                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.GUL, 3)
             elif i == 1 and j == 0:
-                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.RED, 3)
+                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.RÖD, 3)
             else:
-                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.GREEN, 3)
+                self.draw_rectangle(i*9 + 0.5, j*9 + 0.5, i*9 + 6.5, j*9 + 6.5, Color.GRÖN, 3)
                 
             self.draw_rectangle(i*9 + 1.25, j*9 + 1.25, i*9 + 5.75, j*9 + 5.75, Color.DEFAULT, 0)
             
         for i, j in Board.POINTS:
 
             if i == 0 and j == 0:
-                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.BLUE, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.BLUE, 0)
-                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.BLUE, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.BLUE, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.BLÅ, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.BLÅ, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.BLÅ, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.BLÅ, 0)
             elif i == 0 and j == 1:
-                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.YELLOW, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.YELLOW, 0)
-                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.YELLOW, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.YELLOW, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.GUL, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.GUL, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.GUL, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.GUL, 0)
             elif i == 1 and j == 0:
-                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.RED, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.RED, 0)
-                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.RED, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.RED, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.RÖD, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.RÖD, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.RÖD, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.RÖD, 0)
             else:
-                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.GREEN, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.GREEN, 0)
-                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.GREEN, 0)
-                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.GREEN, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 1.65, i*9 + 3.3, j*9 + 3.3, Color.GRÖN, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 3.65, i*9 + 5.3, j*9 + 5.3, Color.GRÖN, 0)
+                self.draw_rectangle(i*9 + 1.65, j*9 + 3.65, i*9 + 3.3, j*9 + 5.3, Color.GRÖN, 0)
+                self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.GRÖN, 0)
 
-        self.draw_polygon(6.5, 6.5, 6.5, 9.5, Color.BLUE, 1)
-        self.draw_polygon(6.5, 6.5, 9.5, 6.5, Color.YELLOW, 1)
-        self.draw_polygon(9.5, 9.5, 6.5, 9.5, Color.RED, 1)
-        self.draw_polygon(9.5, 9.5, 9.5, 6.5, Color.GREEN, 1)
+        self.draw_polygon(6.5, 6.5, 6.5, 9.5, Color.BLÅ, 1)
+        self.draw_polygon(6.5, 6.5, 9.5, 6.5, Color.GUL, 1)
+        self.draw_polygon(9.5, 9.5, 6.5, 9.5, Color.RÖD, 1)
+        self.draw_polygon(9.5, 9.5, 9.5, 6.5, Color.GRÖN, 1)
 
 
     def create_panel(self):
