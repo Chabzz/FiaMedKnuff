@@ -307,10 +307,10 @@ class Dice:
 def align(x, y, color, path_list, flag):
     container = []
     for i in range(2):
-        test = Coin(fia.get_canvas(), x, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
+        test = Coin(Fia.get_canvas(), x, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
         container.append(test)
     for i in range(2):
-        test = Coin(fia.get_canvas(), x + 2*Board.SQUARE_SIZE, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
+        test = Coin(Fia.get_canvas(), x + 2*Board.SQUARE_SIZE, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
         container.append(test)
 
     return container
@@ -362,10 +362,7 @@ def create_enterpage():
     red_label = tk.Label(top, image=redimg)
     red_label.place(x=407, y=130)
 
-<<<<<<< HEAD
 #Två funktionerna är för att försäkra att man inte råkar avsluta spelet
-=======
->>>>>>> 1571e83676764458be9929ff750334193f21cc67
 def on_closing():
     if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck starta i Användarnamn fönstret"):
         top.destroy()
@@ -398,7 +395,7 @@ for i in range(4):
     for j in range(4):
         colors[i][j].change_state(0)
 
-button = tk.Button(fia.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
+button = tk.Button(Fia.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
 button.place(x=210, y=470)
 
 
