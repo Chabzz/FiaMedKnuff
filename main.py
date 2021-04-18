@@ -219,11 +219,11 @@ class Dice:
         }.get(cls.roll[-1], None)
 
         img = ImageTk.PhotoImage(Image.open('./assets/{}'.format(dice)))
-        image_label = tk.Label(ludo.get_frame(), width=100, height=100, image=img, bg=Color.CYAN)
+        image_label = tk.Label(Fia.get_frame(), width=100, height=100, image=img, bg=Color.CYAN)
         image_label.image = img
         image_label.place(x=250, y=300)
 
-        roll_label = tk.Label(ludo.get_frame(), text='{}'.format(' | '.join([str(x) for x in cls.roll])),
+        roll_label = tk.Label(Fia.get_frame(), text='{}'.format(' | '.join([str(x) for x in cls.roll])),
                                  font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
         roll_label.place(x=100, y=200)
 
@@ -260,15 +260,15 @@ class Dice:
                 for j in range(4):
                     colors[i][j].change_state(flag)
 
-            next_label = tk.Label(ludo.get_frame(), text='{} tur'.format(turn[flag]), font=(None, 20), width=30, height=3,
+            next_label = tk.Label(Fia.get_frame(), text='{} tur'.format(turn[flag]), font=(None, 20), width=30, height=3,
                             borderwidth=3, relief=tk.SUNKEN)
             next_label.place(x=100, y=100)
 
-            roll_label = tk.Label(ludo.get_frame(), text='Kasta tärningen', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
+            roll_label = tk.Label(Fia.get_frame(), text='Kasta tärningen', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
             roll_label.place(x=100, y=200)
 
             img = ImageTk.PhotoImage(Image.open('./assets/trans.png'))
-            image_label = tk.Label(ludo.get_frame(), width=100, height=100, image=img, bg=Color.CYAN)
+            image_label = tk.Label(Fia.get_frame(), width=100, height=100, image=img, bg=Color.CYAN)
             image_label.image = img
             image_label.place(x=250, y=300)
 
@@ -323,7 +323,7 @@ def startgame():
         for j in range(4):
             colors[i][j].set_playername(turn[i])
 
-    start_label = tk.Label(ludo.get_frame(), text='Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
+    start_label = tk.Label(Fia.get_frame(), text='Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
     start_label.place(x=100, y=100)
     top.destroy()
 #Funktion för rutan som man skriver in användarnamnen i
