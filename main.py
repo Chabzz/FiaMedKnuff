@@ -7,7 +7,7 @@ from PIL import ImageTk, Image
 from settings import *
 from board import *
 
-
+#Här gör jag classen till själva pjäsen
 class Coin:
 
     def __init__(self, master, x, y, color, path_list, flag):
@@ -26,7 +26,7 @@ class Coin:
         self.flag = flag
         self.win = 0
         self.pad_x = 0
-
+#Ifall pjäsen ska kunna röra sig så behövs denna funktionen
     def moveCoin(self, event):
 
         if self.disable:
@@ -192,7 +192,7 @@ class Coin:
     def set_playername(self, player):
         self.player = player
 
-
+#Klassen för själva tärningarna och tärnignsrullningar
 class Dice:
 
     chance = 0
@@ -314,7 +314,7 @@ def align(x, y, color, path_list, flag):
         container.append(test)
 
     return container
-
+#Funktionen för att starta spelet efter användarnamnen är givna
 def startgame():
     for i in range(4):
         if players[i].get():
@@ -326,7 +326,7 @@ def startgame():
     start_label = tk.Label(ludo.get_frame(), text='Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
     start_label.place(x=100, y=100)
     top.destroy()
-
+#Funktion för rutan som man skriver in användarnamnen i
 def create_enterpage():
     enter_label = tk.Label(top, text='Skriv ditt Användarnamn!', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
     enter_label.place(x=20, y=20)
@@ -362,7 +362,7 @@ def create_enterpage():
     red_label = tk.Label(top, image=redimg)
     red_label.place(x=407, y=130)
 
-
+#Två funktionerna är för att försäkra att man inte råkar avsluta spelet
 def on_closing():
     if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck starta i Användarnamn fönstret"):
         top.destroy()
@@ -380,8 +380,8 @@ height = root.winfo_screenheight()
 root.geometry('{}x{}'.format(width, height))
 root.title('Fia med Knuff')
 
-ludo = LudoBoard(root)
-ludo.create()
+Fia = FiaMedKnuff(root)
+Fia.create()
 
 turn = ['Blå', 'Gul', 'Grön', 'Röd']
 position = []
@@ -409,7 +409,7 @@ T.ex. om pjäsen är fyra steg iväg och du får en femma så måste du använda
 Men om du får en tvåa så kommer pjäsen flyttas två steg närmare mittencirkeln.\n 
     
     Hoppas du har det roligt.
-        # Lycka till! #
+         Lycka till! 
 '''
 tkinter.messagebox.showinfo('Välkommen', welcome_msg)
 
