@@ -13,11 +13,11 @@ class FiaMedKnuff:
         self.title_bar = tk.Label(master, text=Text.HEADER, fg=Color.DEFAULT, bg=Color.CYAN, font=(None, 40), relief=tk.RAISED)
         self.status_bar = tk.Label(master, text=Text.MADE_BY, bd=1, relief=tk.SUNKEN)
 
-    def draw_rectangle(self, bx, ly, lx, by, color, width):
+    def draw_rectangle(self, lx, ly, bx, by, color, width):
         self.canvas.create_rectangle(
-            bx * Board.SQUARE_SIZE,
-            ly * Board.SQUARE_SIZE,
             lx * Board.SQUARE_SIZE,
+            ly * Board.SQUARE_SIZE,
+            bx * Board.SQUARE_SIZE,
             by * Board.SQUARE_SIZE,
             fill=color,
             width = width
@@ -116,8 +116,8 @@ class FiaMedKnuff:
                 self.draw_rectangle(i*9 + 3.65, j*9 + 1.65, i*9 + 5.3, j*9 + 3.3, Color.GRÖN, 0)
 
         self.draw_polygon(6.5, 6.5, 6.5, 9.5, Color.BLÅ, 1)
-        self.draw_polygon(6.5, 6.5, 9.5, 6.5, Color.GUL, 1)
-        self.draw_polygon(9.5, 9.5, 6.5, 9.5, Color.RÖD, 1)
+        self.draw_polygon(9.5, 9.5, 6.5, 9.5, Color.GUL, 1)
+        self.draw_polygon(6.5, 6.5, 9.5, 6.5, Color.RÖD, 1)
         self.draw_polygon(9.5, 9.5, 9.5, 6.5, Color.GRÖN, 1)
 
 

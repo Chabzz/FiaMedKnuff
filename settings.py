@@ -1,8 +1,8 @@
 class Color:
 
     GRÖN = '#00d464'
-    RÖD = '#ff0000'
     GUL = '#f0ff00'
+    RÖD = '#ff0000'
     BLÅ = '#2c84ff'
     DEFAULT = '#fff'
     CYAN = '#5db5bd'
