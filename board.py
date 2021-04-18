@@ -3,7 +3,11 @@ from random import randrange
 from tkinter import font
 
 from settings import *
+<<<<<<< HEAD
 #Skapar själva spelplanen
+=======
+
+>>>>>>> 1571e83676764458be9929ff750334193f21cc67
 class FiaMedKnuff:
 
     def __init__(self, master):
@@ -13,11 +17,11 @@ class FiaMedKnuff:
         self.title_bar = tk.Label(master, text=Text.HEADER, fg=Color.DEFAULT, bg=Color.CYAN, font=(None, 40), relief=tk.RAISED)
         self.status_bar = tk.Label(master, text=Text.MADE_BY, bd=1, relief=tk.SUNKEN)
 
-    def draw_rectangle(self, lx, ly, bx, by, color, width):
+    def draw_rectangle(self, bx, ly, lx, by, color, width):
         self.canvas.create_rectangle(
-            lx * Board.SQUARE_SIZE,
-            ly * Board.SQUARE_SIZE,
             bx * Board.SQUARE_SIZE,
+            ly * Board.SQUARE_SIZE,
+            lx * Board.SQUARE_SIZE,
             by * Board.SQUARE_SIZE,
             fill=color,
             width = width

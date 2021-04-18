@@ -307,10 +307,10 @@ class Dice:
 def align(x, y, color, path_list, flag):
     container = []
     for i in range(2):
-        test = Coin(ludo.get_canvas(), x, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
+        test = Coin(fia.get_canvas(), x, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
         container.append(test)
     for i in range(2):
-        test = Coin(ludo.get_canvas(), x + 2*Board.SQUARE_SIZE, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
+        test = Coin(fia.get_canvas(), x + 2*Board.SQUARE_SIZE, y + i*2*Board.SQUARE_SIZE, color=color, path_list=path_list, flag=flag)
         container.append(test)
 
     return container
@@ -323,7 +323,11 @@ def startgame():
         for j in range(4):
             colors[i][j].set_playername(turn[i])
 
+<<<<<<< HEAD
+    start_label = tk.Label(fia.get_frame(), text='Nu börjar spelet, Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
+=======
     start_label = tk.Label(ludo.get_frame(), text='Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
+>>>>>>> 0bd7512997e54339246fd75ea1389e14c865846d
     start_label.place(x=100, y=100)
     top.destroy()
 #Funktion för rutan som man skriver in användarnamnen i
@@ -362,7 +366,10 @@ def create_enterpage():
     red_label = tk.Label(top, image=redimg)
     red_label.place(x=407, y=130)
 
+<<<<<<< HEAD
 #Två funktionerna är för att försäkra att man inte råkar avsluta spelet
+=======
+>>>>>>> 1571e83676764458be9929ff750334193f21cc67
 def on_closing():
     if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck starta i Användarnamn fönstret"):
         top.destroy()
@@ -380,8 +387,13 @@ height = root.winfo_screenheight()
 root.geometry('{}x{}'.format(width, height))
 root.title('Fia med Knuff')
 
+<<<<<<< HEAD
 Fia = FiaMedKnuff(root)
 Fia.create()
+=======
+fia = FiaMedKnuff(root)
+fia.create()
+>>>>>>> 1571e83676764458be9929ff750334193f21cc67
 
 turn = ['Blå', 'Gul', 'Grön', 'Röd']
 position = []
@@ -395,7 +407,7 @@ for i in range(4):
     for j in range(4):
         colors[i][j].change_state(0)
 
-button = tk.Button(ludo.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
+button = tk.Button(fia.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
 button.place(x=210, y=470)
 
 
