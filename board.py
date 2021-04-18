@@ -4,7 +4,7 @@ from tkinter import font
 
 from settings import *
 
-class LudoBoard:
+class FiaMedKnuff:
 
     def __init__(self, master):
         self.canvas = tk.Canvas(master, width=Board.BOARD_WIDTH, height=Board.BOARD_HEIGHT)
@@ -13,11 +13,11 @@ class LudoBoard:
         self.title_bar = tk.Label(master, text=Text.HEADER, fg=Color.DEFAULT, bg=Color.CYAN, font=(None, 40), relief=tk.RAISED)
         self.status_bar = tk.Label(master, text=Text.MADE_BY, bd=1, relief=tk.SUNKEN)
 
-    def draw_rectangle(self, lx, ly, bx, by, color, width):
+    def draw_rectangle(self, bx, ly, lx, by, color, width):
         self.canvas.create_rectangle(
-            lx * Board.SQUARE_SIZE,
-            ly * Board.SQUARE_SIZE,
             bx * Board.SQUARE_SIZE,
+            ly * Board.SQUARE_SIZE,
+            lx * Board.SQUARE_SIZE,
             by * Board.SQUARE_SIZE,
             fill=color,
             width = width
