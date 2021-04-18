@@ -314,7 +314,7 @@ def align(x, y, color, path_list, flag):
         container.append(test)
 
     return container
-#Funktionen för att starta spelet efter användarnamnen är givna
+#Funktionen för att starta spelet efter användarnamnen är givna.
 def startgame():
     for i in range(4):
         if players[i].get():
