@@ -380,8 +380,8 @@ height = root.winfo_screenheight()
 root.geometry('{}x{}'.format(width, height))
 root.title('Fia med Knuff')
 
-Fia = FiaMedKnuff(root)
-Fia.create()
+fia = FiaMedKnuff(root)
+fia.create()
 
 turn = ['Blå', 'Gul', 'Grön', 'Röd']
 position = []
@@ -395,7 +395,7 @@ for i in range(4):
     for j in range(4):
         colors[i][j].change_state(0)
 
-button = tk.Button(Fia.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
+button = tk.Button(fia.get_frame(), text='Rulla', command=Dice.start, width=20, height=2)
 button.place(x=210, y=470)
 
 
