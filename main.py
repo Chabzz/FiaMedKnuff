@@ -387,13 +387,8 @@ height = root.winfo_screenheight()
 root.geometry('{}x{}'.format(width, height))
 root.title('Fia med Knuff')
 
-<<<<<<< HEAD
 Fia = FiaMedKnuff(root)
 Fia.create()
-=======
-fia = FiaMedKnuff(root)
-fia.create()
->>>>>>> 1571e83676764458be9929ff750334193f21cc67
 
 turn = ['Blå', 'Gul', 'Grön', 'Röd']
 position = []

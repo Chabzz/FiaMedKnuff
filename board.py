@@ -3,11 +3,7 @@ from random import randrange
 from tkinter import font
 
 from settings import *
-<<<<<<< HEAD
 #Skapar själva spelplanen
-=======
-
->>>>>>> 1571e83676764458be9929ff750334193f21cc67
 class FiaMedKnuff:
 
     def __init__(self, master):
