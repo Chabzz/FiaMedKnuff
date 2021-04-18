@@ -6,8 +6,8 @@ class Color:
     RÖD = '#ff0000'
     BLÅ = '#2c84ff'
     DEFAULT = '#fff'
-    CYAN = '#5db5bd'
-    GRÅ = '#b6b6b6'
+    CYAN = '#43BFDD'
+    GRÅ = '#fff'
 
 
 class Board:

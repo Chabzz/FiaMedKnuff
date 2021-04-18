@@ -7,9 +7,9 @@ from settings import *
 class FiaMedKnuff:
 
     def __init__(self, master):
-        self.canvas = tk.Canvas(master, width=Board.BOARD_WIDTH, height=Board.BOARD_HEIGHT)
+        self.canvas = tk.Canvas(master, width=Board.BOARD_WIDTH, height=Board.BOARD_HEIGHT, bg=Color.DEFAULT)
         self.frame = tk.Frame(master, width=Board.PANEL_WIDTH, height=Board.PANEL_HEIGHT, bg=Color.CYAN)
-        self.Quit = tk.Button(master, text='Avsluta', command=master.quit, relief=tk.RAISED, width=20, height=2)
+        self.Quit = tk.Button(master,fg="#fff", text='Avsluta', command=master.quit, bg="#FF0000" , relief=tk.RAISED, width=20, height=2)
         self.title_bar = tk.Label(master, text=Text.HEADER, fg=Color.DEFAULT, bg=Color.CYAN, font=(None, 40), relief=tk.RAISED)
         self.status_bar = tk.Label(master, text=Text.MADE_BY, bd=1, relief=tk.SUNKEN)
 
