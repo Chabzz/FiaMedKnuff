@@ -323,7 +323,7 @@ def startgame():
         for j in range(4):
             colors[i][j].set_playername(turn[i])
 
-    start_label = tk.Label(ludo.get_frame(), text='Nu börjar spelet, Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
+    start_label = tk.Label(ludo.get_frame(), text='Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
     start_label.place(x=100, y=100)
     top.destroy()
 
