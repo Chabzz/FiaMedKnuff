@@ -192,7 +192,7 @@ class Coin:
     def set_playername(self, player):
         self.player = player
 
-#Klassen för själva tärningarna och tärnignsrullningar
+#Klassen för själva tärningarna och tärnignsrullningar.
 class Dice:
 
     chance = 0
