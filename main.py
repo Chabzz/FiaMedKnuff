@@ -78,7 +78,7 @@ class Coin:
             Dice.remove()
             if self.curr_index == len(self.path_list) - 1:
                 self.win = 1
-                tkinter.messagebox.showinfo('INFO','!! Grattis !!\nKasta tärningen igen')
+                tkinter.messagebox.showinfo('INFO','Grattis!\nKasta tärningen igen')
                 congrats = self.congratulations()
 
             if check[0]:
@@ -260,11 +260,11 @@ class Dice:
                 for j in range(4):
                     colors[i][j].change_state(flag)
 
-            next_label = tk.Label(ludo.get_frame(), text='{} turn'.format(turn[flag]), font=(None, 20), width=30, height=3,
+            next_label = tk.Label(ludo.get_frame(), text='{} tur'.format(turn[flag]), font=(None, 20), width=30, height=3,
                             borderwidth=3, relief=tk.SUNKEN)
             next_label.place(x=100, y=100)
 
-            roll_label = tk.Label(ludo.get_frame(), text='KASTA TÄRNINGEN', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
+            roll_label = tk.Label(ludo.get_frame(), text='Kasta tärningen', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
             roll_label.place(x=100, y=200)
 
             img = ImageTk.PhotoImage(Image.open('./assets/trans.png'))
@@ -323,7 +323,7 @@ def startgame():
         for j in range(4):
             colors[i][j].set_playername(turn[i])
 
-    start_label = tk.Label(ludo.get_frame(), text='! STARTA ! Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
+    start_label = tk.Label(ludo.get_frame(), text='Nu börjar spelet, Låt oss börja med {}'.format(turn[0]), font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.SUNKEN)
     start_label.place(x=100, y=100)
     top.destroy()
 
@@ -331,7 +331,7 @@ def create_enterpage():
     enter_label = tk.Label(top, text='Skriv ditt Användarnamn!', font=(None, 20), width=30, height=3, borderwidth=3, relief=tk.RAISED)
     enter_label.place(x=20, y=20)
 
-    enter_button = tk.Button(top, text='Enter', command=startgame, width=15, height=2)
+    enter_button = tk.Button(top, text='Starta', command=startgame, width=15, height=2)
     enter_button.place(x=230, y=500)
 
     for i in range(2):
@@ -364,7 +364,7 @@ def create_enterpage():
 
 
 def on_closing():
-    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck Enter i Användarnamn fönstret"):
+    if tkinter.messagebox.askokcancel("Avsluta", "Vill du avsluta? Ifall du vill fortsätta, tryck starta i Användarnamn fönstret"):
         top.destroy()
         root.destroy()
 
