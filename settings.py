@@ -1,3 +1,4 @@
+#Här definierar jag vilka färger och storlekar som ska användas
 class Color:
 
     GRÖN = '#00d464'
@@ -20,13 +21,13 @@ class Board:
     POSITIVE_V = [(6, 2), (8, 1), (6, 13), (8, 12)]
     POSITIVE_H = [(1, 6), (2, 8), (13, 8), (12, 6)]
 
-
+#Texten längst nere och längst uppe
 class Text:
 
     MADE_BY = 'Made By: Axel Renmark'
     HEADER =  'Fia med knuff'
 
-
+#Class för att bestämma hur pjäserna ska röra på sig
 class Path:
 
     def __init__(self):

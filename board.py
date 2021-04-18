@@ -3,7 +3,7 @@ from random import randrange
 from tkinter import font
 
 from settings import *
-
+#Skapar själva spelplanen
 class FiaMedKnuff:
 
     def __init__(self, master):
@@ -76,7 +76,7 @@ class FiaMedKnuff:
             else:
                 self.draw_rectangle(j + 0.5, i + 0.5, j + 1.5, i + 1.5, Color.GRÖN, 1)
             self.draw_circle(j + 0.7, i + 0.7, j + 1.3, i + 1.3, Color.GRÅ)
-
+#Funktionen för att göra startområdena för spelarna
     def home(self):
 
         for i, j in Board.POINTS:
